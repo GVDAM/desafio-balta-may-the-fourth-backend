@@ -1,4 +1,4 @@
-using MayTheFour.Api.Endpoints;
+using Carter;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +6,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddMediatR(x => x.RegisterServicesFromAssembly(typeof(Program).Assembly));
+builder.Services.AddCarter();
 
 var app = builder.Build();
 
@@ -16,7 +19,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.MapHomeEndpoints();
-app.MapStarshipEndpoints();
 app.UseHttpsRedirection();
+
+app.MapGet("/api/v1/health-check", () => Results.Ok(":-)"));
+app.MapCarter();
+
 app.Run();
