@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MayTheFour.Api", "MayTheFour.Api\MayTheFour.Api.csproj", "{493C23CF-5EC0-4CFE-A430-59F7E65B31E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MayTheFour.Tests", "MayTheFour.Tests\MayTheFour.Tests.csproj", "{A19EABD2-B1F5-4EC9-8568-B211748F68A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{493C23CF-5EC0-4CFE-A430-59F7E65B31E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{493C23CF-5EC0-4CFE-A430-59F7E65B31E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{493C23CF-5EC0-4CFE-A430-59F7E65B31E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{493C23CF-5EC0-4CFE-A430-59F7E65B31E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A19EABD2-B1F5-4EC9-8568-B211748F68A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A19EABD2-B1F5-4EC9-8568-B211748F68A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A19EABD2-B1F5-4EC9-8568-B211748F68A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A19EABD2-B1F5-4EC9-8568-B211748F68A4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1FF432CF-1B25-4525-80BB-D606126F3D72}
+	EndGlobalSection
+EndGlobal
