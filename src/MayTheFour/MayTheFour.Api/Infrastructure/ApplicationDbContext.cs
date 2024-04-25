@@ -6,4 +6,13 @@ namespace MayTheFour.Api.Infrastructure;
 public class ApplicationDbContext(DbContextOptions options) : DbContext(options)
 {
     public DbSet<Starship> Starships { get; set; }
+    public DbSet<Vehicle> Vehicles { get; set; }
+
+	protected override void OnModelCreating(ModelBuilder modelBuilder)
+	{
+		base.OnModelCreating(modelBuilder);
+
+		modelBuilder.ApplyConfiguration(new StarshipEntityTypeConfiguration());
+		modelBuilder.ApplyConfiguration(new VehicleEntityTypeConfiguration());
+	}
 }
