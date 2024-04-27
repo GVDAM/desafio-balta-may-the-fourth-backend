@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MayTheFour.Api.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240425225540_AddStarShipAndVehicleEntity")]
+    [Migration("20240427201835_AddStarShipAndVehicleEntity")]
     partial class AddStarShipAndVehicleEntity
     {
         /// <inheritdoc />
@@ -22,6 +22,7 @@ namespace MayTheFour.Api.Migrations
             modelBuilder.Entity("MayTheFour.Api.Entities.Starship", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("CargoCapacity")
@@ -84,6 +85,7 @@ namespace MayTheFour.Api.Migrations
             modelBuilder.Entity("MayTheFour.Api.Entities.Vehicle", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("CargoCapacity")
@@ -137,7 +139,7 @@ namespace MayTheFour.Api.Migrations
 
             modelBuilder.Entity("MayTheFour.Api.Entities.Starship", b =>
                 {
-                    b.OwnsMany("MayTheFour.Api.Entities.Shared.MovieReference", "Movies", b1 =>
+                    b.OwnsMany("MayTheFour.Api.Features.Movies.Dtos.MovieReference", "Movies", b1 =>
                         {
                             b1.Property<int>("Id")
                                 .HasColumnType("INTEGER");
@@ -164,7 +166,7 @@ namespace MayTheFour.Api.Migrations
 
             modelBuilder.Entity("MayTheFour.Api.Entities.Vehicle", b =>
                 {
-                    b.OwnsMany("MayTheFour.Api.Entities.Shared.MovieReference", "Movies", b1 =>
+                    b.OwnsMany("MayTheFour.Api.Features.Movies.Dtos.MovieReference", "Movies", b1 =>
                         {
                             b1.Property<int>("Id")
                                 .HasColumnType("INTEGER");

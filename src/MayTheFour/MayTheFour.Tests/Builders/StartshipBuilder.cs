@@ -1,8 +1,8 @@
-﻿using MayTheFour.Api.Entities.Shared;
+﻿using MayTheFour.Api.Features.Movies.Dtos;
 
 namespace MayTheFour.Api.Entities
 {
-	public class StarshipBuilder
+    public class StarshipBuilder
 	{
 		private string _name = "Galactic Explorer";
 		private string _model = "GX-3";
@@ -105,7 +105,8 @@ namespace MayTheFour.Api.Entities
 
 		public Starship Build()
 		{
-			return Starship.New(
+			return new Starship(
+				 0,
 				_name,
 				_model,
 				_manufacturer,

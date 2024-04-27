@@ -1,8 +1,8 @@
-﻿using MayTheFour.Api.Entities.Shared;
+﻿using MayTheFour.Api.Features.Movies.Dtos;
 
 namespace MayTheFour.Api.Entities
 {
-	public class VehicleBuilder
+    public class VehicleBuilder
 	{
 		private string _name = "Star Voyager";
 		private string _model = "SV-2";
@@ -91,7 +91,8 @@ namespace MayTheFour.Api.Entities
 
 		public Vehicle Build()
 		{
-			return Vehicle.New(
+			return new Vehicle(
+				0,
 				_name,
 				_model,
 				_manufacturer,

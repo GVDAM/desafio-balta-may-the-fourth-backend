@@ -1,11 +1,9 @@
-﻿using MayTheFour.Api.Entities.Shared;
+﻿using MayTheFour.Api.Features.Movies.Dtos;
 
 namespace MayTheFour.Api.Entities;
 
 public class Starship
 {
-	private static int LastId = 0;
-
 	public int Id { get; private set; }
 	public string Name { get; private set; } = string.Empty;
 	public string Model { get; private set; } = string.Empty;
@@ -24,7 +22,7 @@ public class Starship
 
 	private Starship() { }
 
-	private Starship(
+	public Starship(
 		int id,
 		string name,
 		string model,
@@ -55,50 +53,6 @@ public class Starship
 		Mglt = mglt;
 		Consumables = consumables;
 		Class = startshipClass;
-		Movies = new List<MovieReference>();
-
-		AddMovieReferences(movies);
-	}
-
-	public static Starship New(
-		string name,
-		string model,
-		string manufacturer,
-		string costInCredits,
-		string length,
-		string maxSpeed,
-		string crew,
-		string passengers,
-		string cargoCapacity,
-		string hyperdriveRating,
-		string mglt,
-		string consumables,
-		string startshipClass,
-		List<MovieReference> movies)
-	{
-		LastId++;
-
-		return new Starship(
-			LastId,
-			name,
-			model,
-			manufacturer,
-			costInCredits,
-			length,
-			maxSpeed,
-			crew,
-			passengers,
-			cargoCapacity,
-			hyperdriveRating,
-			mglt,
-			consumables,
-			startshipClass,
-			movies);
-	}
-
-	public void AddMovieReferences(List<MovieReference>? movieReferences)
-	{
-		if (movieReferences != null)
-			Movies.AddRange(movieReferences);
+		Movies = movies;
 	}
 }

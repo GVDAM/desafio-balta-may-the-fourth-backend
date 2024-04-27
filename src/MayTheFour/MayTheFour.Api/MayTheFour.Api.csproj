@@ -22,7 +22,6 @@
 
   <ItemGroup>
     <Folder Include="Features\Characters\" />
-    <Folder Include="Features\Movies\" />
     <Folder Include="Features\Planets\" />
     <Folder Include="Features\Vehicles\" />
   </ItemGroup>

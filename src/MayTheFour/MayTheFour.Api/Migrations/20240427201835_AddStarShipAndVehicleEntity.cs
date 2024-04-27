@@ -18,7 +18,8 @@ namespace MayTheFour.Api.Migrations
                 schema: "may-the-fourth",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "INTEGER", nullable: false),
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(type: "TEXT", nullable: false),
                     Model = table.Column<string>(type: "TEXT", nullable: false),
                     Manufacturer = table.Column<string>(type: "TEXT", nullable: false),
@@ -43,7 +44,8 @@ namespace MayTheFour.Api.Migrations
                 schema: "may-the-fourth",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "INTEGER", nullable: false),
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(type: "TEXT", nullable: false),
                     Model = table.Column<string>(type: "TEXT", nullable: false),
                     Manufacturer = table.Column<string>(type: "TEXT", nullable: false),
