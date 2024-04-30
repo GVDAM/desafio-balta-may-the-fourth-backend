@@ -13,7 +13,7 @@ Desenvolvimento de uma API completa, fornecendo recursos como criação, leitura
 [NOME e GITHUB]
 
 ### 💂‍♀️ Batalhão
-* [NOME e GITHUB]
+* Diemerson R Silva - [GITHUB](https://github.com/diemerson)
 * [NOME e GITHUB]
 * [NOME e GITHUB]
 * [NOME e GITHUB]
