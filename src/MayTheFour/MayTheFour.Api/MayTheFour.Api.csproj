@@ -20,10 +20,4 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Features\Characters\" />
-    <Folder Include="Features\Planets\" />
-    <Folder Include="Features\Vehicles\" />
-  </ItemGroup>
-
 </Project>
